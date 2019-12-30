@@ -82,27 +82,5 @@ def main():
         print("Invalid option")
 
 
-
-
-
-
-
-
-
-
-
-    # scriptName=sys.argv[0]
-    # lowerRange=int(sys.argv[1])
-    # higherRange=int(sys.argv[2])
-    # ip=sys.argv[3].split(",")
-    # print ("[+] Script name: "+str(scriptName))
-    # print("[+] Lower range is:"+str(lowerRange))
-    # print("[+] Higher Range is:"+str(higherRange))
-    # openPort=portScanner(lowerRange, higherRange, ip)
-    # des="+"*100
-    # print(des)
-    # print("Summary")
-    # print("Open ports are:", openPort)
-    # print(des)
 if __name__ == '__main__':
     main()
