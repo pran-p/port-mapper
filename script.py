@@ -1,4 +1,4 @@
-"""This is a simple version of a port scanner built using the concept of sockets in python"""
+"""This is a simple port scanner built using the concept of sockets in python"""
 import socket
 import sys
 import argparse
