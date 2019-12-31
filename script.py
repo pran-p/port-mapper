@@ -64,6 +64,7 @@ def main():
     print(f.renderText('Port Mapper'))
     print ('\033[1m')
     print("P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...")
+    print("F1nds 0p3n p0rts")
     print ('\033[0m')
     parser=argparse.ArgumentParser(description="P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...")
     parser.add_argument('-s','--simple', nargs=2, metavar=('port','ip'), help="enter the port number followed by the ip of the system for port scan")
