@@ -45,7 +45,7 @@ optional arguments:
                         of the system for port scan
 
 ```
-
+### Usecases
 #### Usecase 1
 We need to enter a port number and the ip address.  
 Command to hit.
