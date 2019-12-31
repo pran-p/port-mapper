@@ -55,28 +55,27 @@ def portScanPortIp(port,ip):
             pass
     return b
 
+"""This is the driver code"""
 def main():
-    parser=argparse.ArgumentParser(description="P0rt M4pp3r: A simple port scanner tool...")
-    parser.add_argument('--options',dest='options',help='1-single port ip, 2-multiple port on single ip, 3-range of ports on multiple ip ',type=int, metavar='opt', required=True )
-    parser.add_argument('-p','--port',dest='port',help='port number(comma separated in case of multiple). use in case of option 1,2', metavar='port')
-    parser.add_argument('-ip','--ip-address',dest='ip',help='ip address(comma separeted in case of multiple). use in case of option 1,2,3', metavar='ip')
-    parser.add_argument('-lp','--lower-range',dest='ll',help='lower port limit. use in case of option 3', metavar='port', type=int)
-    parser.add_argument('-hp','--higher-range',dest='hl',help='higher port limit. use in case of option 3', metavar='port', type=int)
+    parser=argparse.ArgumentParser(description="P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...")
+    parser.add_argument('-s','--simple', nargs=2, metavar=('port','ip'), help="enter the port number followed by the ip of the system for port scan")
+    parser.add_argument('-m','--multiple', nargs=2, metavar=('port1,port2,...','ip'),help='enter the list of port number separated by comma and the ip of the system for port scan')
+    parser.add_argument('-r','--range', nargs=3, metavar=('start-port', 'end-port', 'ip1,ip2,...'), help='enter the start port and the end port range and the ip of the system for port scan')
     args=parser.parse_args()
-    if args.options==1:
-        ans=portScanSingle(args.port,args.ip)
+    if args.simple:
+        ans=portScanSingle(args.simple[0],args.simple[1])
         if ans==0:
             print("Th3 p0rt is cl0s3d...")
-    elif args.options==2:
-        p=args.port.split(',')
-        ans=portScanSingleIp(p,args.ip)
+    elif args.multiple:
+        p=args.multiple[0].split(',')
+        ans=portScanSingleIp(p,args.multiple[1])
         print("The open ports are:",ans)
-    elif args.options==3:
-        address=args.ip.split(',')
-        if args.hl>65535:
-            print("Out of limit")
+    elif args.range:
+        address=args.range[2].split(',')
+        if int(args.range[1])>65535:
+            print("Port out of range")
         else:
-            ans=portScanner(args.ll,args.hl, address)
+            ans=portScanner(int(args.range[0]),int(args.range[1]), address)
         print("The open ports are:",ans)
     else:
         print("Invalid option")
