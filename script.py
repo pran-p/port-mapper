@@ -2,6 +2,7 @@
 import socket
 import sys
 import argparse
+import pyfiglet
 
 """This function is used to scan a given ip for a given open port"""
 def portScanSingle(port,ip):
@@ -57,6 +58,9 @@ def portScanPortIp(port,ip):
 
 """This is the driver code"""
 def main():
+    f=pyfiglet.Figlet(font='cybermedium')
+    print(f.renderText('Port Mapper'))
+    print("P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...")
     parser=argparse.ArgumentParser(description="P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...")
     parser.add_argument('-s','--simple', nargs=2, metavar=('port','ip'), help="enter the port number followed by the ip of the system for port scan")
     parser.add_argument('-m','--multiple', nargs=2, metavar=('port1,port2,...','ip'),help='enter the list of port number separated by comma and the ip of the system for port scan')
@@ -78,7 +82,7 @@ def main():
             ans=portScanner(int(args.range[0]),int(args.range[1]), address)
         print("The open ports are:",ans)
     else:
-        print("Invalid option")
+        print("set -h flag to see options")
 
 
 if __name__ == '__main__':
