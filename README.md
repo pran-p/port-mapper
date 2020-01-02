@@ -12,16 +12,16 @@ First clone this repo.
 ```bash
 virtualenv ENV_NAME
 source ENV_NAME/bin/activate
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 python3 script.py -h
 ```
 Once the above instructions are completed you will have a help screen something like the one below displayed.
 
 ```console
-___  ____ ____ ___    _  _ ____ ___  ___  ____ ____ 
-|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/ 
-|    |__| |  \  |     |  | |  | |    |    |___ |  \ 
-                                                    
+___  ____ ____ ___    _  _ ____ ___  ___  ____ ____
+|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/
+|    |__| |  \  |     |  | |  | |    |    |___ |  \
+
 
 
 P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...
@@ -55,10 +55,10 @@ python3 script.py -s 22 localhost
 Result.
 ```console
 
-___  ____ ____ ___    _  _ ____ ___  ___  ____ ____ 
-|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/ 
-|    |__| |  \  |     |  | |  | |    |    |___ |  \ 
-                                                    
+___  ____ ____ ___    _  _ ____ ___  ___  ____ ____
+|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/
+|    |__| |  \  |     |  | |  | |    |    |___ |  \
+
 
 
 P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...
@@ -78,10 +78,10 @@ python3 script.py -m 22,80 localhost
 ```
 Result
 ```console
-___  ____ ____ ___    _  _ ____ ___  ___  ____ ____ 
-|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/ 
-|    |__| |  \  |     |  | |  | |    |    |___ |  \ 
-                                                    
+___  ____ ____ ___    _  _ ____ ___  ___  ____ ____
+|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/
+|    |__| |  \  |     |  | |  | |    |    |___ |  \
+
 
 
 P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...
@@ -104,10 +104,10 @@ python3 script.py -r 10 25 localhost
 ```
 Result
 ```console
-___  ____ ____ ___    _  _ ____ ___  ___  ____ ____ 
-|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/ 
-|    |__| |  \  |     |  | |  | |    |    |___ |  \ 
-                                                    
+___  ____ ____ ___    _  _ ____ ___  ___  ____ ____
+|__] |  | |__/  |     |\/| |__| |__] |__] |___ |__/
+|    |__| |  \  |     |  | |  | |    |    |___ |  \
+
 
 
 P0rt M4pp3r: 4 simpl3 p0rt sc4nn3r t00l...
@@ -133,9 +133,3 @@ F1nds 0p3n p0rts
 
 The open ports are: [(22, 'localhost')]
 ```
-
-
-
-
-
- 
